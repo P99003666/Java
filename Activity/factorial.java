@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.*;
-class Arithmetic
+public class Main
 {
     static int factorial(int n) 
     { 
