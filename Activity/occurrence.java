@@ -20,15 +20,28 @@ class Occurrence
 	int elem, size;
 	System.out.println("Enter size");
 	size = sc.nextInt();
+		if(size < 0)
+	{
+	    System.out.println("Invalid Input")
+	}
+	else{
 	int arrayElem[] = new int[size];
 		System.out.println("Enter array");
 	for(int i=0;i<size;i++)
-	{
-		arrayElem[i] = sc.nextInt();			
+	{	
+		
+		arrayElem[i] = sc.nextInt();
+		if(arrayElem[i]<0)
+		{
+		    System.out.println("Invalid Input");
+		}
+		break;
+					
 	}
 	
 	System.out.println("Enter Element to be searched");
 	elem = sc.nextInt();
 		System.out.println("Occurred " + findElementCount(size, arrayElem, elem));
 	}
+}
 }
