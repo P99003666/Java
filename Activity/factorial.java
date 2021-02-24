@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.*;
-public class Main
+class Arithmatic
 {
     static int factorial(int n) 
     { 
@@ -17,7 +17,7 @@ public class Main
     int[] intArray = new int[3];
     Scanner sc = new Scanner (System.in);
 
-      System.out.print ("Enter any number: ");
+      System.out.print ("Enter number: ");
       n = sc.nextInt ();
       temp = n;
 
@@ -31,22 +31,14 @@ public class Main
     while (temp > 0)
       {
 	digit = temp % 10;
-
-	System.out.println (digit);
 	intArray[nextIndex] = digit;
 	++nextIndex;
 	temp = temp / 10;
 	count--;
       }
-    for (int k = 0; k < intArray.length; k++)
-      {
-	System.out.println (intArray[k]);
-      }
     for (int i = intArray.length - 1; i >= 0; i--)
     {
-        
-      System.out.println(intArray[i] + "  ");
-      System.out.println(factorial(intArray[i]));
+         System.out.println(factorial(intArray[i]));
 }
 }
 }
