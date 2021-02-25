@@ -14,7 +14,10 @@ class HighestScore
   }
    for (int k = 1; k<= size; k = k+2)
       {
-	  System.out.println(arry[k]);
+	   if(arry[k]==0)
+	   continue;
+	   else
+	   System.out.println(arry[k]);
   }
   
   
