@@ -1,6 +1,5 @@
 import java.util.Arrays;
-import java.util.Scanner;
-
+import java.util.*;
 class TeamNotFound extends Exception{
 	TeamNotFound(){
 		System.out.println("TeamNot Found"); //user defined exception
@@ -8,22 +7,21 @@ class TeamNotFound extends Exception{
 }
 
 public class CustomTeamName {
-	static void validate(String ruunerUp, String winner)throws AgeException{
+	static void validate(String ruunerUp, String winner)throws TeamNotFound{
 		String [] teams = new String[]{"Chennai Super Kings","Sun Risers Hyderabad","Delhi Capitals","Kolkata Knight Riders","Mumbai Indians","Royal Challengers Bangalore","Rajasthan Royals"};
-		int[] values = null;
-		boolean teamOneFound = Arrays.stream(values).anyMatch(ruunerUp ::equals);
- 		boolean teamTwoFound = Arrays.stream(values).anyMatch(winner ::equals);
+		boolean teamOneFound = Arrays.stream(teams).anyMatch(ruunerUp ::equals);
+ 		boolean teamTwoFound = Arrays.stream(teams).anyMatch(winner ::equals);
 		
 	     if(teamOneFound && teamTwoFound)
 	     {
-	    	 System.out.println("Player's name \n" + ruunerUp);
-			 System.out.println("Player's age \n" + winner);	
+	    	 System.out.println("RunnerUp \n" + ruunerUp);
+			 System.out.println("Winner  \n" + winner);	
 	    	
 	     }
 	      
 	     else
 	      {
-	    	 throw new AgeException();
+	    	 throw new TeamNotFound();
 	      }
 	   }
 	public static void main(String[] args)  {
